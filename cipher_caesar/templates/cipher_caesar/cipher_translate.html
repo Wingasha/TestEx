@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание</title>
+    <!--
+    Chart.min.js - библиотека для построения графиков
+    angular-chart.min.js - библиотека, основаная на  Chart.min.js, для построения графиков на AngularJS
+    -->
+    {% load staticfiles %}
+    <script src="{%static 'cipher_caesar/js/angular.min.js' %}" ></script>
+    <script src="{%static 'cipher_caesar/js/Chart.min.js' %}"></script>
+    <script src="{%static 'cipher_caesar/js/angular-chart.min.js' %}"></script>
+    <script src="{%static 'cipher_caesar/js/app.js' %}" ></script>
+    <link rel="stylesheet" href="{%static 'cipher_caesar/css/myStylesheet.css' %}">
+</head>
+<body >
+
+<div ng-controller="mainCtrl" class="scroll">
+    <div class="header">
+        <h1>Шифр Цезаря</h1>
+        <hr>
+    </div>
+    <div class="content-body">
+        <div class="left-column">
+            <textarea type="text" ng-model="inputData" ng-change="chartChange()" ng-keypress="keyValidate($event)"
+                      ng-paste="pasteValidate($event)" spellcheck="false"></textarea>
+        </div>
+        <div class="center">
+            <div class="center top">
+                <button disabled class="btn">ROT</button>
+                <input  type="text" size="3" ng-model="offset">
+            </div>
+            <div class="center bottom">
+                <button class="arrow arrow-left" ng-click="sendRequest($event)" value="encode">Encode</button>
+                <button class="arrow arrow-right" ng-click="sendRequest($event)" value="decode">Decode</button>
+            </div>
+        </div>
+
+        <div class="right-column">
+            <textarea  type="text" ng-model="outputData" readonly></textarea>
+        </div>
+
+        <canvas id="bar" class="chart chart-bar" height="100%"
+                chart-data="data"
+                chart-labels="labels"
+                chart-options="options"
+                chart-series="series"
+                chart-dataset-override="datasetOverride">
+        </canvas>
+
+    </div>
+</div>
+
+</body>
+</html>

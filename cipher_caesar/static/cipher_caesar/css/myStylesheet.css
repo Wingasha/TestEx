@@ -1,0 +1,181 @@
+body {
+    background-image: url('../img/background.jpg') ;
+    background-size: cover;
+}
+
+.header {
+    position: relative;
+    z-index: 99;
+    width: 980px;
+    margin: 0 auto;
+}
+
+.scroll {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    height: 1000px;
+    width: 1000px;
+    background-image: url('../img/center.png');
+    background-size: cover;
+}
+
+.content-body {
+    height: 900px;
+    width: 980px;
+    margin: 0 auto;
+}
+
+.left-column {
+    width:400px;
+    float:left;
+}
+
+.center{
+    width:180px;
+    float:left;
+    height: 160px;
+}
+
+.center.top > button + input {
+    margin-top: 100px;
+}
+
+.center.bottom {
+    height: 160px;
+}
+
+textarea {
+    height: 400px;
+    width: 390px;
+    resize: none;
+}
+
+.right-column {
+    width:400px;
+    float:right;
+}
+
+canvas {
+    padding-top: 20px;
+}
+
+.arrow {
+    color: #fff;
+    border-radius: 0em; /* Обнулить округлости */
+    -moz-border-radius: 0em; /* Обнулить округлости */
+    -webkit-border-radius: 0em; /* Обнулить округлости */
+    background: #265d94;
+    border: none;
+    text-shadow: -1px -1px 0px rgba(0,0,0,.2);
+    border-bottom: 2px solid #153a65;
+    position: relative;
+    margin: 0 auto; /* Это просто для выравнивания кнопки посередине */
+}
+
+.arrow:hover,
+.arrow:focus,
+.arrow:active,
+.arrow.active,
+.open .dropdown-toggle.arrow {
+    color: #fff;
+    outline: none;
+    background: #2e6eae;
+    border-bottom: 2px solid #1b4a80;
+}
+
+.arrow:active,
+.arrow.active,
+.open .dropdown-toggle.arrow {
+    background: #265d94;
+    color: #fff;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.arrow:after, .arrow:before {
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+}
+
+.arrow:after {
+	border-color: rgba(136, 183, 213, 0);
+	border-width: 16px;
+	margin-top: -16px;
+}
+
+.arrow:before {
+	border-color: rgba(194, 225, 245, 0);
+	border-width: 16px;
+	margin-top: -14px;
+}
+
+
+.arrow.arrow-right:after, .arrow.arrow-right:before {
+	left: 100%;
+}
+
+.arrow.arrow-right:after {
+	border-left-color: #265d94;
+}
+
+.arrow.arrow-right:before {
+	border-left-color: #153a65;
+}
+
+.arrow.arrow-right:hover:after,
+.arrow.arrow-right:focus:after,
+.arrow.arrow-right:active:after,
+.arrow.arrow-right.active:after {
+    border-left-color: #2e6eae;
+}
+
+.arrow.arrow-right:active:after,
+.arrow.arrow-right.active:after,
+.open .dropdown-toggle.arrow.arrow-right:after {
+    border-left-color: #265d94;
+}
+
+
+.arrow.arrow-left:after, .arrow.arrow-left:before {
+	right: 100%;
+}
+
+.arrow.arrow-left:after {
+	border-right-color: #265d94;
+}
+
+.arrow.arrow-left:before {
+	border-right-color: #153a65;
+}
+
+.arrow.arrow-left:hover:after,
+.arrow.arrow-left:focus:after,
+.arrow.arrow-left:active:after,
+.arrow.arrow-left.active:after {
+    border-right-color: #2e6eae;
+}
+
+.arrow.arrow-left:active:after,
+.arrow.arrow-left.active:after,
+.open .dropdown-toggle.arrow.arrow-left:after {
+    border-right-color: #265d94;
+}
+
+.btn {
+   color: #fff;
+    border-radius: 0em; /* Обнулить округлости */
+    -moz-border-radius: 0em; /* Обнулить округлости */
+     -webkit-border-radius: 0em; /* Обнулить округлости */
+    background: #265d94;
+    border: none;
+    text-shadow: -1px -1px 0px rgba(0,0,0,.2);
+    border: 1px solid #153a65;
+    position: relative;
+    font-size: 14px;
+}
